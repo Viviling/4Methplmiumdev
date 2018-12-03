@@ -12,9 +12,6 @@ public class MainActivity extends AppCompatActivity {
     private EditText editText;
     private EditText editText2;
     private TextView textView;
-    private TextView textView1;
-    private TextView textView2;
-    private TextView textView3;
     private Button sl;
     private Button mi;
     private Button de;
@@ -28,9 +25,6 @@ public class MainActivity extends AppCompatActivity {
         editText  = (EditText) findViewById(R.id.editText);
         editText2 = (EditText) findViewById(R.id.editText2);
         textView  = (TextView) findViewById(R.id.textView);
-        textView1  = (TextView) findViewById(R.id.textView1);
-        textView2= (TextView) findViewById(R.id.textView2);
-        textView3  = (TextView) findViewById(R.id.textView3);
         sl = (Button) findViewById(R.id.sl);
         mi = (Button) findViewById(R.id.mi);
         um= (Button) findViewById(R.id.um);
@@ -72,14 +66,12 @@ public class MainActivity extends AppCompatActivity {
 
                 a = Double.parseDouble(S1);
                 b = Double.parseDouble(S2);
-                if(a>=b) {
-                    c = a - b;
-                }else{
-                    c = b - a;
-                }
+
+                c=a-b;
+
                 String S = Double.toString(c);
 
-                textView1.setText(S);
+                textView.setText(S);
             }
         });
         um.setOnClickListener(new View.OnClickListener() {
@@ -97,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                 c=a*b;
                 String S = Double.toString(c);
 
-                textView2.setText(S);
+                textView.setText(S);
             }
         });
         de.setOnClickListener(new View.OnClickListener() {
@@ -112,14 +104,13 @@ public class MainActivity extends AppCompatActivity {
 
                 a = Double.parseDouble(S1);
                 b = Double.parseDouble(S2);
-                if(a>=b) {
-                    c = a/b;
-                }else{
-                    c = b/a;
-                }
+
+                c=a/b;
+
+
                 String S = Double.toString(c);
 
-                textView3.setText(S);
+                textView.setText(S);
             }
         });
 
